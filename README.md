@@ -1,4 +1,3 @@
-# ANN
 # Python in virtualenv
 
 1. Install Python 3.x
