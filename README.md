@@ -22,8 +22,8 @@
 <br /><br /><br /><br /><br />
 
 ```diff
-+ * 程式檔說明
-    1. 單一感知器(AND / OR / XOR)模擬 perceptron.py
+* 程式檔說明
+  1. 單一感知器(AND / OR / XOR)模擬 perceptron.py
 ```
 
 
