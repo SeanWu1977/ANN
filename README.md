@@ -17,3 +17,10 @@
     * scikit-learn 機器學習<br />
     * matplotlib 繪圖<br />
     * pandas 提供資料格式(Data Frame)來進行分析資料<br />
+
+
+
+
+
+
+* 程式
