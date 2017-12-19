@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import perceptron_cls as ppn
+# import Adaline as ppn
 from matplotlib.colors import ListedColormap
 
 def plot_decision_regions(X, y, classifier, resolution=0.01):
@@ -38,10 +39,12 @@ X = df.iloc[0:100,[0,2]].values # get first 100 rows and col0 and col2
 
 
 ppn = ppn.Perception(0.1 ,20)
+# ppn = ppn.Adaline(0.1 ,20)
 ppn.fit(X,y)
 
 print(ppn.w_)
 
+plt.plot(range(1,len(ppn.errors_)+1),ppn.errors_,marker='.')
 plt.plot(range(1,len(ppn.errors_)+1),ppn.errors_,marker='.')
 plt.xlabel('Epochs')
 plt.ylabel('Nmber of misclassifications')
