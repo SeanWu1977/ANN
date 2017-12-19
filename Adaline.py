@@ -13,7 +13,7 @@ class Adaline(object):
             # 計算每一筆輸出與預期輸出差
             errors = (y - output)
 
-            # 每一特徵值的所有X*deltaW相加*eta 
+            # 每一特徵值的所有值 X*deltaW 相加*eta 
             self.w_[1:] += self.eta * X.T.dot(errors)
 
             # 調整門檻值
