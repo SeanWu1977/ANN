@@ -18,7 +18,13 @@
 
 3.2 iris_adaline.py 用鳶尾花數據模擬適應性神經元
 
+4.1 AdalineSGD.py 適應性神經元建構-隨機梯度下降法(資料量過大時訓練用原方法效率
+> 資料量過大時訓練用原方法訓練會很耗資源，因此改用此法
+> 用成本函數來計算 <br>
+> 每次用所有訓練資料來計算weight 
 
+
+4.2 iris_adalineSGD.py 用鳶尾花數據模擬適應性神經元
 
 * 公用函式
 > plot_decision_regions.py 畫色塊函數
