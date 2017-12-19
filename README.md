@@ -6,7 +6,7 @@
 1. perceptron.py 單一感知器(AND / OR / XOR)模擬 
 
 2.1 perceptron_cls.py 單一感知器, 類別方式建構
-> 每次用一筆訓練資料來計算w
+> 每次用一筆訓練資料來計算weight 
 
 
 2.2 iris.py 用鳶尾花數據模擬單一感知器(類別)
