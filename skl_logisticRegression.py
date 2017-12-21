@@ -66,3 +66,11 @@ print("預測第n個樣本分類機率")
 for s in pd:
     print("Iris-Setosa:{:.2%}, Iris-Versicolor: {:.2%}, Iris-Virginica: {:.2%}".format(s[0], s[1], s[2]))
 
+
+# 依不同反正規化參數對準確率影響(C : inverse regularization parameter)
+for c in np.arange(-5, 5,dtype=float):
+    lr = LogisticRegression(C=10**c, random_state=0)
+    lr.fit(X_train_std, y_train)
+    y_pred = lr.predict(X_test_std)
+    print("C : {} w1 : {:.2f},  w2 : {:.2f}, 預測準確率 : {:.2%}".format(c, lr.coef_[1][0], lr.coef_[1][1], accuracy_score(y_test, y_pred)))
+
