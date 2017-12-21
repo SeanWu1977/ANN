@@ -27,7 +27,7 @@
 4.2 iris_adalineSGD.py 用鳶尾花數據模擬適應性神經元
 
 5. skl_perceptron.py 用scikit-learn package模擬感知器(鳶尾花數據)
-
+6. skl_logisticRegression.py 用scikit-learn package模擬邏輯迴歸模型感知器(鳶尾花數據)
 
 ***
 ***
