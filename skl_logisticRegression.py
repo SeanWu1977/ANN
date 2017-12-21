@@ -46,7 +46,7 @@ lr.fit(X_train_std, y_train)
 
 # 預測
 y_pred = lr.predict(X_test_std)
-print(accuracy_score(y_test, y_pred))
+print("預測準確率 : {:.2%}".format(accuracy_score(y_test, y_pred)))
 
 
 # 繪圖
@@ -59,4 +59,10 @@ plt.ylabel('petal width [standardized]')
 plt.legend(loc="upper left")
 plt.show()
 
+
+# 預測第n個樣本的機率
+pd=lr.predict_proba(X_test_std)
+print("預測第n個樣本分類機率")
+for s in pd:
+    print("Iris-Setosa:{:.2%}, Iris-Versicolor: {:.2%}, Iris-Virginica: {:.2%}".format(s[0], s[1], s[2]))
 
