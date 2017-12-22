@@ -11,6 +11,12 @@ from sklearn.preprocessing import StandardScaler
 
 # 感知器函數
 from sklearn.linear_model import LogisticRegression
+# 用以下函式效果同上，差別在有提供partial_fit來處理大量資料，去除記憶體不足問題。線上學習概念。
+# from sklearn.linear_model import SGDClassifier
+# ppn = SGDClassifier(loss='log')
+
+
+
 
 # 效能指標模組
 # accuracy_score 算正確率
@@ -68,7 +74,8 @@ for s in pd:
 
 
 # 依不同反正規化參數對準確率影響(C : inverse regularization parameter)
-for c in np.arange(-5, 5,dtype=float):
+# 利用迴圈找出較好的C值
+for c in np.arange(-5, 20,dtype=float):
     lr = LogisticRegression(C=10**c, random_state=0)
     lr.fit(X_train_std, y_train)
     y_pred = lr.predict(X_test_std)

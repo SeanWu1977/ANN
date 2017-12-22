@@ -11,6 +11,9 @@ from sklearn.preprocessing import StandardScaler
 
 # 感知器函數
 from sklearn.linear_model import Perceptron
+# 用以下函式效果同上，差別在有提供partial_fit來處理大量資料，去除記憶體不足問題。線上學習概念。
+# from sklearn.linear_model import SGDClassifier
+# ppn = SGDClassifier(loss='perceptron')
 
 # 效能指標模組
 # accuracy_score 算正確率
