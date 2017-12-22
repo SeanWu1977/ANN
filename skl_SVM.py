@@ -64,7 +64,7 @@ plt.show()
 
 
 
-# 不同C來控制錯誤分的的懲罰(penalty)
+# 不同C來控制錯誤分的的懲罰(penalty) c: Penalty parameter
 '''
 Specifies the kernel type to be used in the algorithm.
 It must be one of ‘linear’, ‘poly’, ‘rbf’, ‘sigmoid’, ‘precomputed’ or a callable.
@@ -72,7 +72,29 @@ If none is given, ‘rbf’ will be used.
 If a callable is given it is used to pre-compute the kernel matrix from data matrices;
 that matrix should be an array of shape (n_samples, n_samples)
 '''    
-for c in np.arange(0.00001, 0.0001, 0.00001, dtype=float):
+for c in np.arange(1.0, 10.0, 1.0, dtype=float):
     svm = SVC(kernel='linear', C=c, random_state=0)
     svm.fit(X_train_std, y_train)
-    print("預測準確率 : {:.2%}".format(accuracy_score(y_test, y_pred)))
+    y_pred = svm.predict(X_test_std)
+    print("Penalty parameter : {} , 預測準確率 : {:.2%}".format(c, accuracy_score(y_test, y_pred)))
+
+
+
+# kernel SVM (曲線決策線) gamma影響大，可測試不同大小看準確率
+ksvm = SVC(kernel='rbf', C=1.0, random_state=0, gamma=10.0)
+ksvm.fit(X_train_std, y_train)
+pdr.plot_decision_regions(X=X_combined_std, y=y_combined,
+                          classifier=ksvm, test_idx=range(105,150))
+plt.xlabel('petal length [standardized]')
+plt.ylabel('petal width [standardized]')
+plt.legend(loc="upper left")
+y_pred = ksvm.predict(X_test_std)
+print("預測準確率 : {:.2%}".format(accuracy_score(y_test, y_pred)))
+plt.show()
+
+for c in np.arange(0.1, 1.0, .1, dtype=float):
+    ksvm = SVC(kernel='rbf', C=1.0, random_state=0, gamma=c)
+    ksvm.fit(X_train_std, y_train)
+    pdr.plot_decision_regions(X=X_combined_std, y=y_combined,
+                              classifier=ksvm, test_idx=range(105,150))
+    print("gamma : {:.2} , 預測準確率 : {:.2%}".format(c, accuracy_score(y_test, y_pred)))
