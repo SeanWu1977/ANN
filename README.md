@@ -35,6 +35,7 @@
 6. 決策樹學習(用資訊增益information gain)<br>
 6.1 impurity.py 不同的impurity方法(不純度)<br>
 6.2 iris_decisiontree.py 用scikit-learn package模擬決策數學(鳶尾花數據)<br>
+    tree.png GraphViz將結果視覺化
 ***
 ***
 * 公用函式
