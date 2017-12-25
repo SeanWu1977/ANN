@@ -30,6 +30,8 @@
 5.2 skl_logisticRegression.py 用scikit-learn package模擬邏輯迴歸模型感知器(鳶尾花數據)<br>
 5.3 skl_SVM.py 用scikit-learn package模擬support vector Machine(鳶尾花數據)<br>
 
+
+
 6. 決策樹學習(用資訊增益information gain)<br>
 6.1 impurity.py 不同的impurity方法(不純度)<br>
 6.2 iris_decisiontree.py 用scikit-learn package模擬決策數學(鳶尾花數據)<br>
