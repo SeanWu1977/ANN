@@ -36,6 +36,11 @@
 6.1 impurity.py 不同的impurity方法(不純度)<br>
 6.2 iris_decisiontree.py 用scikit-learn package模擬決策樹學習(鳶尾花數據)<br>
     tree.png GraphViz將結果視覺化
+    
+
+7. skl_neighbors.py 使用KNN(k-nearest neighbor classifier) 分類演算法
+> 找距離最近的n個點，看那個分類比較多就是屬於該類
+
 ***
 ***
 * 公用函式
