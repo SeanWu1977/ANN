@@ -1,6 +1,3 @@
-# 文章請看Wiki
-
-
 ## 程式檔說明
 
 1. perceptron.py 單一感知器(AND / OR / XOR)模擬 
