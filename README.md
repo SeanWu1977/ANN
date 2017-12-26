@@ -1,3 +1,4 @@
 # 目錄說明
 ### /classification 分類學習演算法
-### /image          圖示，用於wiki
+### /image          圖片檔,用於wiki
+### /preprocessing  資料預處理
