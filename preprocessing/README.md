@@ -82,7 +82,7 @@ imr = imr.fit(df)
 # 將NaN取代
 imputed_date = imr.transform(df.values)
 
-# 以上兩個動作(fit & transform)可用以下一個動作又代
+# 以上兩個動作(fit & transform)可用以下一個動作取代，缺點是每一次都要執行一次學習(資料量大效能會不好)。
 imputed_date = imr.fit_transform(df)
 
 ```
