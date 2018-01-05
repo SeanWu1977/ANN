@@ -72,5 +72,17 @@ df.dropna(subset=['C'])
 
 ############ 預處理二，插補技術(補值 interpolation techniques) ##############
 
+from sklearn.preprocessing import Imputer
+
+# 設定補值的策略  strategy = mean | median | most_frequent 
+imr = Imputer(missing_values='NaN', strategy='mean',axis=0) 
+
+# 輸入資料算出NaN要換的值
+imr = imr.fit(df)
+# 將NaN取代
+imputed_date = imr.transform(df.values)
+
+# 以上兩個動作(fit & transform)可用以下一個動作又代
+imputed_date = imr.fit_transform(df)
 
 ```
