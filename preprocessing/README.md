@@ -77,7 +77,7 @@ from sklearn.preprocessing import Imputer
 # 設定補值的策略  strategy = mean | median | most_frequent 
 imr = Imputer(missing_values='NaN', strategy='mean',axis=0) 
 
-# 輸入資料算出NaN要換的值
+# 從輸入值學習，產生NaN要換的值
 imr = imr.fit(df)
 # 將NaN取代
 imputed_date = imr.transform(df.values)
