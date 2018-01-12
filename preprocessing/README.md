@@ -12,7 +12,9 @@
 
 4. overfitting
    * 對訓練集預測很準，但實際資料不準
-   * 可減少特徵，資料正規化(降低偏值影響)
-      - LogisticRegression 利用調整懲罰項 (L2 -> L1 penalty，會產生稀疏權重) , 再調整正規化值達到降維
+   * 降維
+      - 資料正規化(降低偏值影響): LogisticRegression 利用調整懲罰項 (L2 -> L1 penalty，會產生稀疏權重) , 再調整正規化值達到降維
+      - 特徵選擇 (feature selection)
+      - 特徵提取 (feature extraction)
    * 使用較少參數，做出較簡單模型
    * 收集更多的訓練數據集
