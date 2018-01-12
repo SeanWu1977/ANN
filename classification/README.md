@@ -45,5 +45,5 @@
 
 * 成本函數 (sum of squared errors, SSE) : 越大代表模型越不準，最小化成本是目標
 
-
+* 正規化(regularization) : 加入特徵來懲罰極端數權重。
 
