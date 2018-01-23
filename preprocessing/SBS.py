@@ -14,8 +14,12 @@ class SBS():
         循序特徵選擇(sequential feature selection) : 用於不支援正規化的演算法
              循序向後選擇(sequential back selection, SBS) : 每輪移除一個影響準確率
                                                             (準則函數, criterion function)最少的特徵，
-                                                            不斷重覆此步驟直到設定特徵數。 
-    '''
+                                                            不斷重覆此步驟直到設定特徵數。
+
+                                                            
+                                                            演算法: n個特徵，組合n-1個特徵(即n個組合)，計算準確率最高的組合，進行下一輪的運算。
+
+                                                            '''
     def __init__(self, estimator, k_features, scoring=accuracy_score,
                  test_size=0.25, random_state=1):
         self.scoring = scoring
