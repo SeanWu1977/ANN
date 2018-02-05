@@ -77,6 +77,7 @@ eigen_pairs.sort(reverse=True)
 w = np.hstack((eigen_pairs[0][1][:,np.newaxis]),(eigen_pairs[1][1][:,np.newaxis]))
 # 進行pca轉換 , 全部資料變2維
 X_train_pca = X_train_std.dot(w)
+# 用X_train_pca資料畫出各個分類
 colors= ['r', 'b', 'g']
 markers = ['s', 'x', 'o']
 for l, c, m in zip(np.unique(y_train), colors, markers):
