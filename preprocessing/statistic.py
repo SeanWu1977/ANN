@@ -85,3 +85,5 @@ for l, c, m in zip(np.unique(y_train), colors, markers):
 plt.xlabel('PC 1')
 plt.ylabel('PC 2')
 plt.show()    
+
+### 到此降維完成，從上圖可看到資料的分配，可用線性分類器就可完成
