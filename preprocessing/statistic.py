@@ -75,3 +75,12 @@ eigen_pairs.sort(reverse=True)
 # np.hstack(a,b) 第一軸相加 --> (3,) (3,) --> (6,)  || (2,3) (3,3) --> (5,3) 第二軸向量數要相同
 # np.vstack(a,b) 第二軸相加 --> (3,) (3,) --> (6,)  || (3,3) (3,2) --> (3,5) 第一軸向量數要相同
 w = np.hstack((eigen_pairs[0][1][:,np.newaxis]),(eigen_pairs[1][1][:,np.newaxis]))
+# 進行pca轉換 , 全部資料變2維
+X_train_pca = X_train_std.dot(w)
+colors= ['r', 'b', 'g']
+markers = ['s', 'x', 'o']
+for l, c, m in zip(np.unique(y_train), colors, markers):
+    plt.scatter(X_train_pca[y_train==l, 0], X_traint_pca[y_train==l, 1], c=c, label=l, marker=m)
+plt.xlabel('PC 1')
+plt.ylabel('PC 2')
+plt.show()    
