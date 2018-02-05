@@ -55,7 +55,7 @@ cov_mat = np.cov(X_train_std.T)
 eigen_vals, eigen_vecs = np.linalg.eig(cov_mat)
 eigen_vals, eigen_vecs = np.linalg.eigh(cov_mat)
 
-# 4. 選特徵值
+# 4. 選特徵值(排序由大到小用圖表觀查)
 tot = sum(eigen_vals)
 var_exp = [(i/tot) for i in sorted(eigen_vals, reverse=True)]
 cum_var_exp = np.cumsum(var_exp)
@@ -65,3 +65,13 @@ plt.ylabel('Explained variance ratio')
 plt.xlabel('Principal components')
 plt.legend(loc='best') 
 plt.show()
+
+# 5. 將原始資料轉化為新特徵值
+# 用特徵值排序取得特徵向量
+eigen_pars= [(np.abs(eigen_vals[i]),eigen_vecs[:,i]) for i in range(len(eigen_vals))]
+eigen_pairs.sort(reverse=True)
+# 將前兩個特徵向量合併成13*2矩陣以利之後原始資料轉換成2個新特徵
+# array[:,np.newaxis] 將原陣列多一 y 軸，(3) -> (3,1)
+# np.hstack(a,b) 第一軸相加 --> (3,) (3,) --> (6,)  || (2,3) (3,3) --> (5,3) 第二軸向量數要相同
+# np.vstack(a,b) 第二軸相加 --> (3,) (3,) --> (6,)  || (3,3) (3,2) --> (3,5) 第一軸向量數要相同
+w = np.hstack((eigen_pairs[0][1][:,np.newaxis]),(eigen_pairs[1][1][:,np.newaxis]))
