@@ -34,8 +34,6 @@ cd ~
 
 git clone https://github.com/ageitgey/face_recognition.git
 
-cd ~ 
-
 pip3 install setuptools
 
 mkdir -p dlib 
