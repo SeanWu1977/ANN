@@ -31,6 +31,8 @@ https://github.com/sthanhng/yoloface/blob/master/assets/outside_000001_yoloface.
 ./darknet detect cfg/yolov3-face.cfg yolov3-wider_16000.weights data/outside_000001.jpg 
 
 
-
+# yolo3 by pytorch
+# https://github.com/ayooshkathuria/pytorch-yolo-v3
+#
 
 ```
