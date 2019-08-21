@@ -4,12 +4,12 @@ import cv2
 import numpy as np
 
 
+# (1)cv2.IMREAD_COLOR : Loads a color image. Any transparency of image will be neglected. It is the default flag.
+# (0)cv2.IMREAD_GRAYSCALE : Loads image in grayscale mode
+# (-1)cv2.IMREAD_UNCHANGED : Loads image as such including alpha channel
+
 img = cv2.imread('123.jpg',1)
 cv2.imshow('image0',img)
-img1 = cv2.imread('123.jpg',0)
-cv2.imshow('image1',img1)
-img_1 = cv2.imread('123.jpg',-1)
-cv2.imshow('image-1',img_1)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
