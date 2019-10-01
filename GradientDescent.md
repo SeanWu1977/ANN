@@ -31,4 +31,8 @@ yp = w1x + w2*(x^2)
 每一組方程式(不同階的方程式)yp跟實際y的誤差(loss function)，
 就可得到最好的線性方程式。
 
+但：
+model越複雜對training data計算出的loss function會越低(overfitting)，
+但對testing data不一定會有一樣的趨勢。
+
 ```
