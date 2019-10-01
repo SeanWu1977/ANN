@@ -34,5 +34,6 @@ yp = w1x + w2*(x^2)
 但：
 model越複雜對training data計算出的loss function會越低(overfitting)，
 但對testing data不一定會有一樣的趨勢。
+所以要選一個最適合的model.
 
 ```
