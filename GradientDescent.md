@@ -4,7 +4,7 @@
 ▽=dL/dw == 算出斜率
 當dL/dw > 0，則 w 要減少
 當dL/dw < 0，則 w 要增加
-dL/dw = 0，完美(但可能不是最低local optimal，有雙谷)
+dL/dw = 0，完美(但可能不是最低local optimal，有雙谷，但liner 不會有雙谷)
 
 η == 學習率
 
