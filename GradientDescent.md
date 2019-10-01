@@ -1,7 +1,7 @@
 1. 針對權重(w)進行調整，決定要如何調整
 2. 目標函數(loss function) L(w)
 ```
-dL/dw == 算出斜率
+▽=dL/dw == 算出斜率
 當dL/dw > 0，則 w 要減少
 當dL/dw < 0，則 w 要增加
 dL/dw = 0，完美(但可能不是最低local optimal，有雙谷)
