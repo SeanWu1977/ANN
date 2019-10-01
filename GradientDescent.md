@@ -3,7 +3,7 @@
 ```
 * 最簡單的loss function = Σ(y-yp)^2
 * 要取最小，即預測值跟原值差最少
-假設 yp = xw
+假設 yp = b + Σxw
 
 ▽=dL/dw == 算出斜率
 當dL/dw > 0，則 w 要減少
@@ -35,5 +35,16 @@ yp = w1x + w2*(x^2)
 model越複雜對training data計算出的loss function會越低(overfitting)，
 但對testing data不一定會有一樣的趨勢。
 所以要選一個最適合的model.
+
+```
+3. regularization 
+```
+在原本的L(w)中，在加入λΣw^2
+L(w) = Σ(y-yp)^2 + λΣw^2
+要L(w)越小，代表w也要越小，增加w的影響力。
+
+如此L(w)也比較平滑，即輸入改變時，影響不大(雜訊影響不大)
+yp = b + Σxw
+當w小時，x有變化時，yp的變化也小。
 
 ```
