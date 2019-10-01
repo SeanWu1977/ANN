@@ -1,7 +1,7 @@
 1. 針對權重(w)進行調整，決定要如何調整
 2. 目標函數(loss function) L(w)
 ```
-* 最簡單的loss function = sum(y-yp)^2
+* 最簡單的loss function = Σ(y-yp)^2
 * 要取最小，即預測值跟原值差最少
 
 ▽=dL/dw == 算出斜率
