@@ -48,3 +48,8 @@ yp = b + Σxw
 當w小時，x有變化時，yp的變化也小。
 
 ```
+4. bais & variance
+```
+bais : (中心點)偏移
+variance : 分散程度
+```
