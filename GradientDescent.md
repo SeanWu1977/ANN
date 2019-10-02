@@ -114,5 +114,5 @@ c) 結論
 5. SGD => 另一種loss function
 原L = Σ(y-yp)^2
 改為 L = (y-yp)^2
-w1 = w0 - η-dL/dw
+w1 = w0 - η*(dL/dw)
 與原本比較就差別在L原本是取輪所有值，SGD只取該輪一個值來進行。
