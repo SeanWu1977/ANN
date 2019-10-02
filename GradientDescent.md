@@ -47,6 +47,9 @@ L(w) = Σ(y-yp)^2 + λΣw^2
 yp = b + Σxw
 當w小時，x有變化時，yp的變化也小。
 
+==> 如每次取n筆，共取m輪，
+每輪算出來的yp曲線會比較平滑(variance會較小)。
+
 ```
 4. bias & variance
 ```
@@ -80,10 +83,11 @@ b) bias: 所有預測值的平均與真實資料的平均差
 c) 結論
 模型 | bias | variance 
 ----------------------
-簡單 |  大  |    小     | 可多加feature或把模型用的更複雜              | 訓練資料跟測試資料都不準 | underfitting : error 來自於 bias 
-複雜 |  小  |    大     | 可減少feature或把模型用的更簡單，增加訓練資料 | 訓練資料準，測試資料不準 | overfitting  : error 來自於 variance
+簡單 |  大  |    小     | 可多加feature或把模型用的更複雜   | 訓練資料跟測試資料都不準 | underfitting : error 來自於 bias 
+複雜 |  小  |    大     | 增加訓練資料，或用regularization | 訓練資料準，測試資料不準 | overfitting  : error 來自於 variance
 要在bias 與 variance之間取一個平衡點
 
+另可用Cross validation
 
 
 ```
