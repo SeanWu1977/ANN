@@ -52,5 +52,16 @@ yp = b + Σxw
 ```
 bais : (中心點)偏移
 variance : 分散程度
-模型越複雜，越容易受資料影響，用不同資料算出來的模型會差越大(overfitting)。
+模型越複雜，越容易受資料影響，用不同資料算出來的模型會差越大(variance大)。
+ex:
+f(x)=a
+不論x的集合如何，預測結果f(x)的結果都一樣，variance=0
+集合X1計算出來的f(x)=a
+集合X2計算出來的f(x)=a
+variance=0
+
+f(x)=b+wx
+集合X1計算出來的f(x)=b1+w1x
+集合X2計算出來的f(x)=b2+w2x
+variance>=0
 ```
