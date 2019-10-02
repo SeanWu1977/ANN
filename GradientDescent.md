@@ -48,10 +48,11 @@ yp = b + Σxw
 當w小時，x有變化時，yp的變化也小。
 
 ```
-4. bais & variance
+4. bias & variance
 ```
-bais : (中心點)偏移
+bias : (中心點)偏移
 variance : 分散程度
+a) variance : 分散程度
 模型越複雜，越容易受資料影響，用不同資料算出來的模型會差越大(variance大)。
 ex:
 f(x)=a
@@ -64,4 +65,10 @@ f(x)=b+wx
 集合X1計算出來的f(x)=b1+w1x
 集合X2計算出來的f(x)=b2+w2x
 variance>=0
+b) bias: 所有預測值的平均與真實資料的平均差
+
+c) 假設已知真實預測線_f(x)，每次取n個點來預測，共執行m次。
+將每次的f(x)加平均：f_a(x)
+當模型越複雜，雖然f(x)間的variance大，但f_a(x)會越接近_f(x)
+
 ```
