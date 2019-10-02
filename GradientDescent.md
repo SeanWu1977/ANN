@@ -78,8 +78,8 @@ b) bias: 所有預測值的平均與真實資料的平均差
 
 
 c) 結論
-模型 | bias | variance
+模型 | bias | variance 
 ----------------------
-簡單 |  大  |    小     underfitting
-複雜 |  小  |    大     overfitting
+簡單 |  大  |    小     underfitting : error 來自於 bias
+複雜 |  小  |    大     overfitting  : error 來自於 variance
 ```
