@@ -121,7 +121,7 @@ w1 = w0 - η*(dL/dw)
 而SGD則是每一個值調整一次。
 ```
 
-6. feature scal
+6. feature scaling
 ```
 例如 x: 1~100, y:1~1000
 透過轉換把 x: 1~100 ==> x: 1~1000,
