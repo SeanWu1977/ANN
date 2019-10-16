@@ -6,6 +6,7 @@
 # 3. 每個 "Neighborhood" group 計算 "LotFrontage" 的 median
 # 4. 每個 "Neighborhood" group 的 "LotFrontage" 執行fillna
 # x 指的是 "LotFrontage"
+# select median(LotFrontage) from df groupby Neighborhood
 df.groupby("Neighborhood")["LotFrontage"].transform(lambda x: x.fillna(x.median()))
 
 ```
