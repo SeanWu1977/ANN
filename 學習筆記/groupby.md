@@ -20,7 +20,6 @@ Neighborhood | LotFrontage
       3              8
       
 df.groupby("Neighborhood")["LotFrontage"].median()
-
 Neighborhood | LotFrontage
       1              5
       2              7
