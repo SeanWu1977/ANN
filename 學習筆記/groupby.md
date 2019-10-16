@@ -18,13 +18,19 @@ Neighborhood | LotFrontage
       2              9
       3              4
       3              8
-      
+# 以下兩個結果相同      
 df.groupby("Neighborhood")["LotFrontage"].median()
+df.groupby("Neighborhood").agg({"LotFrontage":'median'})
+
 Neighborhood | LotFrontage
       1              5
       2              7
       3              8      
-      
+
+# 但用agg更有彈性  
+df.groupby("Neighborhood").agg({"LotFrontage":'median','LotArea':['max', 'min']})
+
+
 # 使用transform時，則會針對每一資料進行轉換
 df.groupby("Neighborhood")["LotFrontage"].transform(lambda x: x.fillna(x.median()))
 Neighborhood | new column
