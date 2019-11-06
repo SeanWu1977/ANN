@@ -14,7 +14,12 @@ target => keras.utils.to_categorical()
 
 
 ```
-
+how to deal with bad model ?
+1. early stopping
+2. regularization (smooth)
+3. Dropout
+4. New activation function
+5. Adaptive learning rate
 
 
 
