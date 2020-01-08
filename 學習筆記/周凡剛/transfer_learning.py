@@ -11,3 +11,8 @@ vgg = VGG16(include_top=False, input_shape=(224, 224, 3))
 from keras.models import Sequential, Model
 vgg.input # tensor
 vgg.output # tensor
+
+
+# Series vs numpy.array
+# Series 只有一維 [[1,1,1],[1,1,1]] (2,)
+# Numpy array 可有多維[[1,1,1],[1,1,1]] (2,3)
